@@ -1,5 +1,23 @@
-https://developers.line.biz/flex-simulator/
-{
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover">
+    <title>LIFF - LINE Front-end Framework</title>
+</head>
+<body>
+    <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
+    <script>
+        async function main() {
+            // Initialize LIFF with your LiffId
+            await liff.init({ liffId: "1653575653-0mBzOyAJ" })
+
+            // Open the Share Target Picker
+            await liff.shareTargetPicker([
+                {
+                    type: "flex",
+                    altText: "Flex Message from Share Target Picker",
+                    contents: {{
   "type": "carousel",
   "contents": [
     {
@@ -154,5 +172,18 @@ https://developers.line.biz/flex-simulator/
       }
     }
   ]
-
 }
+                        
+                      // Your Flex Message JSON structure goes here
+                    }
+                }
+            ])
+            
+            // Close the LIFF window after sharing
+            liff.closeWindow()
+        }
+
+        main()
+    </script>
+</body>
+</html>
