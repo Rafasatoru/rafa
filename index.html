@@ -39,6 +39,9 @@
     <script>
         // แก้ไขโครงสร้าง Flex Message ให้ถูกต้อง
         const flexMessage = {
+            type: "flex",
+            altText: "📚 แนะนำหนังสือน่าอ่าน โดย นตท.ชั้นปีที่ 2",
+            contents: {
   "type": "carousel",
   "contents": [
     {
@@ -193,7 +196,8 @@
       }
     }
   ]
-};
+}
+        };
 
         function displayMessage(id) {
             document.querySelectorAll('.msg').forEach(el => el.style.display = 'none');
@@ -241,3 +245,4 @@
     </script>
 </body>
 </html>
+
