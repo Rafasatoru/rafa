@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover">
-    <title>LIFF - LINE Front-end Framework</title>
+    <title>Send Flex Message</title>
 </head>
 <body>
-    <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
-    <script>
-        async function main() {
-            // Initialize LIFF with your LiffId
-            await liff.init({ liffId: "1653575653-0mBzOyAJ" })
+    <button onclick="sendFlex()">ส่งข้อความ Flex</button>
 
-            // Open the Share Target Picker
-            await liff.shareTargetPicker([
-                {
-                    type: "flex",
-                    altText: "Flex Message from Share Target Picker",
-                    contents: {{
+    <script>
+        function sendFlex() {
+            {
   "type": "carousel",
   "contents": [
     {
@@ -39,15 +30,15 @@
             "type": "button",
             "action": {
               "type": "uri",
-              "uri": "http://linecorp.com/",
+              "uri": "https://liff.line.me/2008893224-OPdL7Glb",
               "label": "    "
             },
             "position": "absolute",
-            "offsetTop": "76%",
+            "offsetTop": "73%",
             "offsetEnd": "29%",
             "gravity": "bottom",
             "offsetStart": "30%",
-            "offsetBottom": "10%"
+            "offsetBottom": "14%"
           }
         ],
         "borderWidth": "none",
@@ -173,17 +164,8 @@
     }
   ]
 }
-                        
-                      // Your Flex Message JSON structure goes here
-                    }
-                }
-            ])
             
-            // Close the LIFF window after sharing
-            liff.closeWindow()
         }
-
-        main()
     </script>
 </body>
 </html>
